@@ -41,7 +41,9 @@ export const CardTitle = Vue.component('CardTitle', {
 
       const trimmedTitle = this.getCardTitleWithoutSuffix(title);
 
-      if (trimmedTitle.length > 26) {
+      if (trimmedTitle.length > 29) {
+        classes.push('title-even-smaller');
+      } else if (trimmedTitle.length > 26) {
         classes.push('title-smaller');
       } else if (trimmedTitle.length > 23) {
         classes.push('title-small');
